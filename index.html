@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<title>Department of Agriculture / Farmland Preservation Data Tools</title>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Department of Agriculture / Farmland Preservation Data Tools</h1>
+				</div>
+			</div>
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation"><a href="#parcel-number-massager" aria-controls="parcel-number-massager" role="tab" data-toggle="tab">Definition Queries</a></li>
+				<li role="presentation" class="active"><a href="#parcel-agreement-splitter" aria-controls="parcel-agreement-splitter" role="tab" data-toggle="tab">Agreement Mapping</a></li>
+			</ul>
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane" id="parcel-number-massager">
+					<div class="row">
+						<div class="col-md-12">
+							<h3>Definition Queries</h3>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-xs-12">
+							<label for="parcel_list">Parcel Number List:</label><br>
+							<textarea class="form-control" id="parcel_list" rows="10"></textarea>
+						</div>
+						<div class="col-md-6 col-xs-12">
+							<label for="generated_query">Generated Query:</label><br>
+							<textarea class="form-control" id="generated_query" rows="10"></textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+						<input class="form-control btn btn-primary" type="button" id="do_conversion" value="Convert To Query">
+						</div>
+					</div>
+				</div>
+				<div role="tabpanel" class="tab-pane active" id="parcel-agreement-splitter">
+					<div class="row">
+						<div class="col-md-12">
+							<h3>Agreement Mapping</h3>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-xs-12">
+							<label for="sheet_data">Paste Spreadsheet Data:</label><br>
+							<textarea class="form-control" id="sheet_data" rows="10"></textarea>
+						</div>
+						<div class="col-md-6 col-xs-12">
+							<label for="output_records">Output Records:</label><br>
+							<textarea class="form-control" id="output_records" rows="10"></textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+						<input class="form-control btn btn-primary" type="button" id="make_records" value="Make New Records">
+						</div>
+					</div>
+				<div>
+			</div>
+		</div>
+		<script src="js/common.js"></script>
+		<script src="js/definition-queries.js"></script>
+		<script src="js/agreement-mapping.js"></script>
+	</body>
+</html>

@@ -1,7 +1,16 @@
 $(function() {
 	$make_records.on('click', function(e) {
-		var row_data = $sheet_data.val().split(/\n/g);
+		var row_data = $sheet_data
+			.val()
+			.trim()
+			.split(/\n/g);
 		var data = [row_data[0]];
+
+		if (row_data[0].ParcelList === 'undefined') {
+			alert("You must include the column label row in the data you paste.");
+			return;
+		}
+
 		var columns = row_data[0].split(/\t/);
 		$.each(row_data.slice(1), function(idx, row) {
 			var fields = row.split(/\t/g);
